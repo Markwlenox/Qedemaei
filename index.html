@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qedemaei</title>
+<meta name="description" content="Qedemaei — a novel series by Mark W. Lenox. Coming soon.">
+<meta property="og:title" content="Qedemaei">
+<meta property="og:description" content="A novel series by Mark W. Lenox. Coming soon.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://qedemaei.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --abyss:   #0b1f26;
+    --deep:    #123039;
+    --stone:   #d6cfc0;
+    --dim:     #8fa39f;
+    --patina:  #6f9c8d;
+    --bronze:  #b98d55;
+
+    --measure: 62ch;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(2rem, 6vw, 5rem) 1.25rem;
+    background:
+      radial-gradient(120% 80% at 50% 118%, rgba(111,156,141,0.16) 0%, rgba(111,156,141,0) 60%),
+      linear-gradient(178deg, var(--abyss) 0%, var(--abyss) 42%, var(--deep) 100%);
+    color: var(--stone);
+    font-family: "Spectral", Georgia, "Times New Roman", serif;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  main {
+    width: 100%;
+    max-width: 62rem;
+  }
+
+  /* ---- Wordmark: the one bold gesture on the page ---- */
+
+  .wordmark {
+    margin: 0;
+    font-weight: 200;
+    font-size: clamp(2.6rem, 11vw, 6.5rem);
+    letter-spacing: 0.30em;
+    text-indent: 0.30em;          /* re-centres the tracked-out line */
+    line-height: 1;
+    color: var(--stone);
+    text-shadow: 0 0 42px rgba(111,156,141,0.28);
+  }
+
+  .byline {
+    margin: 1.6rem 0 0;
+    font-size: clamp(0.86rem, 2.1vw, 1rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--dim);
+    letter-spacing: 0.02em;
+  }
+
+  /* ---- The shelf: three volumes standing on a waterline ---- */
+
+  .shelf {
+    position: relative;
+    margin: clamp(3rem, 9vw, 5.5rem) 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    gap: clamp(1.25rem, 5vw, 3.25rem);
+  }
+
+  .shelf::after {          /* the horizon line the covers rest on */
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 4.6rem;
+    height: 1px;
+    background: linear-gradient(90deg,
+      rgba(214,207,192,0)   0%,
+      rgba(214,207,192,0.28) 22%,
+      rgba(214,207,192,0.28) 78%,
+      rgba(214,207,192,0)  100%);
+    z-index: 0;
+  }
+
+  .volume {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    flex: 0 1 clamp(9rem, 24vw, 15rem);
+  }
+
+  .cover {
+    position: relative;
+    aspect-ratio: 2 / 3;
+    background: linear-gradient(160deg, #16333c 0%, #0e242b 100%);
+    border: 1px solid rgba(185,141,85,0.38);
+    box-shadow:
+      0 1.6rem 2.6rem -1.2rem rgba(0,0,0,0.75),
+      0 0 0 1px rgba(0,0,0,0.35) inset;
+    overflow: hidden;
+  }
+
+  .cover img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Fallback shown until a cover file is dropped into /covers */
+  .cover .placeholder {
+    position: absolute;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 0.82rem;
+    font-style: italic;
+    letter-spacing: 0.04em;
+    color: rgba(143,163,159,0.75);
+  }
+
+  .cover.missing img { display: none; }
+  .cover.missing .placeholder { display: flex; }
+
+  figcaption {
+    margin-top: 1.15rem;
+    height: 3rem;
+  }
+
+  .numeral {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-indent: 0.22em;
+    color: var(--bronze);
+  }
+
+  .book-title {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: clamp(0.95rem, 2.4vw, 1.12rem);
+    font-weight: 400;
+    color: var(--stone);
+  }
+
+  /* ---- Status ---- */
+
+  .status {
+    margin: clamp(3.25rem, 9vw, 5rem) 0 0;
+    font-size: clamp(1.15rem, 3.4vw, 1.6rem);
+    font-weight: 300;
+    letter-spacing: 0.16em;
+    text-indent: 0.16em;
+    color: var(--patina);
+  }
+
+  /* ---- One orchestrated page-load reveal ---- */
+
+  @media (prefers-reduced-motion: no-preference) {
+    .wordmark, .byline, .volume, .status {
+      opacity: 0;
+      animation: surface 1.1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    }
+    .wordmark          { animation-delay: 0.15s; }
+    .byline            { animation-delay: 0.45s; }
+    .volume:nth-child(1) { animation-delay: 0.75s; }
+    .volume:nth-child(2) { animation-delay: 0.90s; }
+    .volume:nth-child(3) { animation-delay: 1.05s; }
+    .status            { animation-delay: 1.45s; }
+  }
+
+  @keyframes surface {
+    from { opacity: 0; transform: translateY(0.75rem); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  @media (max-width: 30rem) {
+    .shelf::after { display: none; }
+    .volume { flex: 0 1 11rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1 class="wordmark">Qedemaei</h1>
+  <p class="byline">A novel series by Mark W. Lenox</p>
+
+  <section class="shelf" aria-label="The books">
+    <figure class="volume">
+      <div class="cover">
+        <img src="covers/book-one.jpg" alt="Cover of Book One, Qedemaei">
+        <span class="placeholder">Cover forthcoming</span>
+      </div>
+      <figcaption>
+        <span class="numeral">I</span>
+        <span class="book-title">Qedemaei</span>
+      </figcaption>
+    </figure>
+
+    <figure class="volume">
+      <div class="cover">
+        <img src="covers/book-two.jpg" alt="Cover of Book Two, Power">
+        <span class="placeholder">Cover forthcoming</span>
+      </div>
+      <figcaption>
+        <span class="numeral">II</span>
+        <span class="book-title">Power</span>
+      </figcaption>
+    </figure>
+
+    <figure class="volume">
+      <div class="cover">
+        <img src="covers/book-three.jpg" alt="Cover of Book Three, Emergence">
+        <span class="placeholder">Cover forthcoming</span>
+      </div>
+      <figcaption>
+        <span class="numeral">III</span>
+        <span class="book-title">Emergence</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <p class="status">Coming Soon&hellip;</p>
+</main>
+
+<script>
+  // If a cover file isn't in place yet, show the etched frame instead of a broken image.
+  document.querySelectorAll('.cover img').forEach(function (img) {
+    img.addEventListener('error', function () {
+      img.closest('.cover').classList.add('missing');
+    });
+    if (img.complete && img.naturalWidth === 0) {
+      img.closest('.cover').classList.add('missing');
+    }
+  });
+</script>
+</body>
+</html>
