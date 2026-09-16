@@ -72,7 +72,7 @@
     letter-spacing: 0.02em;
   }
 
-  /* ---- The shelf: three volumes standing on a waterline ---- */
+  /* ---- The shelf: four volumes standing on a waterline ---- */
 
   .shelf {
     position: relative;
@@ -81,7 +81,7 @@
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: center;
-    gap: clamp(1.25rem, 5vw, 3.25rem);
+    gap: clamp(1rem, 3.5vw, 2.75rem);
   }
 
   .shelf::after {          /* the horizon line the covers rest on */
@@ -103,7 +103,7 @@
     position: relative;
     z-index: 1;
     margin: 0;
-    flex: 0 1 clamp(9rem, 24vw, 15rem);
+    flex: 0 1 clamp(8rem, 19vw, 12.75rem);
   }
 
   .cover {
@@ -186,7 +186,8 @@
     .volume:nth-child(1) { animation-delay: 0.75s; }
     .volume:nth-child(2) { animation-delay: 0.90s; }
     .volume:nth-child(3) { animation-delay: 1.05s; }
-    .status            { animation-delay: 1.45s; }
+    .volume:nth-child(4) { animation-delay: 1.20s; }
+    .status            { animation-delay: 1.60s; }
   }
 
   @keyframes surface {
@@ -194,9 +195,11 @@
     to   { opacity: 1; transform: none; }
   }
 
-  @media (max-width: 30rem) {
+  /* Narrow screens: two by two, no waterline (it would only cross one row) */
+  @media (max-width: 40rem) {
     .shelf::after { display: none; }
-    .volume { flex: 0 1 11rem; }
+    .shelf { gap: 1.75rem 1.25rem; }
+    .volume { flex: 0 1 calc(50% - 0.75rem); max-width: 11rem; }
   }
 </style>
 </head>
@@ -236,6 +239,17 @@
       <figcaption>
         <span class="numeral">III</span>
         <span class="book-title">Emergence</span>
+      </figcaption>
+    </figure>
+
+    <figure class="volume">
+      <div class="cover">
+        <img src="covers/book-four.png" alt="Cover of Book Four, Confluence">
+        <span class="placeholder">Cover forthcoming</span>
+      </div>
+      <figcaption>
+        <span class="numeral">IV</span>
+        <span class="book-title">Confluence</span>
       </figcaption>
     </figure>
   </section>
