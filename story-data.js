@@ -70,11 +70,11 @@ window.STORY = [
     alt: "Aileah in polished silver armor, standing in front of the stone city of Atlantis." },
 
   { img: "aileah-helmet", kicker: "Aileah", title: "The helmet goes on last",
-    text: "There is a reason the old stories always gave Athena a helmet. Somebody saw her wearing one.",
+    text: "There is a reason the old stories always gave Athena a helmet. Somebody saw her wearing one, and the world never forgot what happened.",
     alt: "Aileah in full silver battle armor and helmet before the city." },
 
   { img: "raman", kicker: "Atlantis", title: "Raman Okido",
-    text: "High Strategos, commander of everyone in Atlantis who carries a weapon. Five thousand years old, dry as the desert, and very hard to surprise.",
+    text: "High Strategos, commander of everyone in Atlantis who carries a weapon. Five thousand years old, dry as the desert, and very hard to surprise. Surface world mythology called him Apollo, but they didn\u2019t know the other half of the story.",
     alt: "Portrait of Raman, a lean dark-haired man in a white open-collar shirt." },
 
   { img: "raman-armor", kicker: "Raman", title: "The staff",
