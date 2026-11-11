@@ -24,7 +24,8 @@
 <link rel="canonical" href="https://qedemaei.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="story.css">
 <style>
   :root {
     --abyss:   #0b1f26;
@@ -41,13 +42,12 @@
 
   html { -webkit-text-size-adjust: 100%; }
 
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
   body {
     margin: 0;
-    min-height: 100svh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: clamp(2rem, 6vw, 5rem) 1.25rem;
+    background-color: var(--abyss);
     background:
       radial-gradient(120% 80% at 50% 118%, rgba(111,156,141,0.16) 0%, rgba(111,156,141,0) 60%),
       linear-gradient(178deg, var(--abyss) 0%, var(--abyss) 42%, var(--deep) 100%);
@@ -58,7 +58,16 @@
     text-align: center;
   }
 
-  main {
+  .hero {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(2rem, 6vw, 5rem) 1.25rem;
+  }
+
+  .hero-inner {
     width: 100%;
     max-width: 62rem;
   }
@@ -216,8 +225,10 @@
   }
 </style>
 </head>
-<body>
+<body id="top">
 <main>
+<header class="hero">
+<div class="hero-inner">
   <h1 class="wordmark">Qedemaei</h1>
   <p class="byline">A novel series by Mark W. Lenox</p>
 
@@ -268,6 +279,47 @@
   </section>
 
   <p class="status">Coming Soon&hellip;</p>
+
+  <a class="enter-cue" href="#opener">Enter the Chronicles<span class="chev" aria-hidden="true"></span></a>
+</div>
+</header>
+
+<section class="opener" id="opener" aria-labelledby="opener-title">
+  <p class="eyebrow">The Logan Chronicles</p>
+  <h2 id="opener-title">Meet the Logans</h2>
+  <div class="film" style="background-image:url(media/opener-poster.webp)">
+    <video preload="metadata" playsinline poster="media/opener-poster.webp"
+           aria-label="Lee and Kate Logan at the Flying L Ranch, with a spoken introduction to the series">
+      <source src="media/logan-chronicles-opener.mp4" type="video/mp4">
+    </video>
+    <div class="veil" aria-hidden="true"></div>
+    <div class="film-title" aria-hidden="true">
+      <span class="t">The Logan Chronicles</span>
+      <span class="by">By Dr. Mark W. Lenox</span>
+    </div>
+    <button class="play" type="button" aria-label="Play the introduction, with sound">
+      <span class="disc" aria-hidden="true"></span>
+      <span>Play the introduction</span>
+    </button>
+  </div>
+  <p class="after" aria-live="polite"></p>
+  <p class="sr-only">Narration: The Logan Chronicles is the story of Lee and Kate Logan. Two engineers from Idaho who stumbled into the most amazing adventure.</p>
+</section>
+
+<section class="story" id="story" aria-label="An introduction to the people, places and things of the Logan Chronicles">
+  <div class="story-stage" aria-hidden="false">
+    <div class="chapter-tag" aria-hidden="true"></div>
+    <div class="shade" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"></div>
+  </div>
+  <div class="story-steps"></div>
+</section>
+
+<section class="finale">
+  <p class="wordmark">Qedemaei</p>
+  <p>The Logan Chronicles. Coming soon.</p>
+  <a href="#top">Back to the books</a>
+</section>
 </main>
 
 <script>
@@ -281,5 +333,7 @@
     }
   });
 </script>
+<script src="story-data.js"></script>
+<script src="story.js"></script>
 </body>
 </html>
