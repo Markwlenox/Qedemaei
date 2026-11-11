@@ -121,10 +121,6 @@ window.STORY = [
     text: "Home. The Logans’ ranch on the Fall River, with its own grass airstrip, a log house on the hill and Lee’s red-and-white Cessna 180 parked in the meadow.",
     alt: "A red-and-white Cessna 180 parked in a grassy meadow below pine trees and a log house." },
 
-  { img: "treat-reactor", kicker: "Eastern Idaho", title: "Idaho National Laboratory",
-    text: "Out on the high desert west of Idaho Falls, America has been building and testing reactors since 1949. It is where Kate works, and where her reputation was made.",
-    alt: "Interior of a reactor test facility with an American flag hanging beside the core structure." },
-
   { img: "atlantis-dome", kicker: "The central Pacific", title: "Atlantis",
     text: "Three hundred feet beneath the surface, a city of four hundred thousand people lives under a dome built over an entire undersea mountain. They have been there for forty thousand years. Nobody on the surface knows.",
     alt: "An immense glowing dome on the deep sea floor with a lit city inside and an aircraft descending toward it." },
@@ -176,10 +172,6 @@ window.STORY = [
   { img: "hypersonic", kicker: "Atlantean aircraft", title: "The hypersonic",
     text: "No engines, no intakes, no windows, no control surfaces. Gravitational-field propulsion takes it to nearly Mach 8 without a sonic boom, and straight into the sea when it is time to go home.",
     alt: "A seamless dark arrowhead-shaped aircraft flying high above the ocean." },
-
-  { img: "kates-rifle", kicker: "Kate Logan", title: "Kate’s rifle",
-    text: "A scoped bolt-action hunting rifle, well used and very well looked after. In Kate’s hands it settles arguments from a long way off.",
-    alt: "A scoped hunting rifle with a dark wood stock resting on a fur beside a backpack." },
 
   { img: "yellowstone-sentinel", kicker: "Beneath Yellowstone", title: "The sentinels",
     text: "The builders left guardians. Some of them are very old. Some of them are very fast.",
