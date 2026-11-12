@@ -107,11 +107,11 @@ window.STORY = [
 
   { img: "party-arrival", kicker: "Atlantis", title: "An Atlantean evening",
     text: "Atlantis has had forty thousand years to perfect a party. Chandeliers, gowns of responsive fabric, and a great many people who have waited a very long time to meet the Qedemaei.",
-    alt: "Lee and Kate walking hand in hand down a staircase into a grand ballroom full of guests." },
+    alt: "Seen from behind, Kate in a beaded royal purple dress and Lee in a burgundy jacket walk arm in arm down a lit staircase into a crowded ballroom." },
 
-  { img: "party", kicker: "Atlantis", title: "The guests of honor",
-    text: "Kate in red, Lee in black, and an entire city watching them walk in.",
-    alt: "Lee and Kate walking through the center of a crowded, gilded ballroom." },
+  { img: "party", kicker: "Atlantis", title: "After the last dance",
+    text: "Kate in royal purple with her shoes in her hand, Lee laughing beside her, and an entire city still talking about the two of them.",
+    alt: "Kate, in a beaded royal purple dress and carrying her red heels, and Lee, in a burgundy jacket, laughing as they climb the stairs out of the ballroom." },
 
   { chapter: "II", title: "The Places",
     text: "From a hay meadow in Idaho to a city three hundred feet beneath the Pacific.",
