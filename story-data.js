@@ -86,8 +86,8 @@ window.STORY = [
     alt: "Lee in sunglasses and tactical gear with a rifle on a terrace above Atlantis." },
 
   { img: "charge", kicker: "Atlantis", title: "From the front",
-    text: "When Atlantis has to fight for itself, Aileah does not lead from behind.",
-    alt: "A column of soldiers marching through a colonnaded street of Atlantis behind a figure in white armor." },
+    text: "When Atlantis has to fight for itself, Aileah does not lead from behind. Neither do Raman and Lee, and the city follows them.",
+    alt: "Aileah in silver armor leads a crowd of armed citizens down a colonnaded street of Atlantis, with Raman holding his staff on her right and Lee carrying a rifle on her left." },
 
   { img: "lee-kate-ramp", kicker: "The Logans", title: "Mother and daughter",
     text: "Kate with her rifle across her knees and Samantha on the radio, the ramp of an Atlantean aircraft open beneath them and a city far below. It is not a vacation.",
