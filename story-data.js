@@ -81,6 +81,10 @@ window.STORY = [
     text: "Atlantean special operator. The surface world once told stories about a man like Kratos and called him Hercules. The stories undersold him.",
     alt: "Kratos, a heavily muscled bearded man with folded arms." },
 
+  { img: "kratos-statue", kicker: "Kratos", title: "Urgent demolition",
+    text: "When it absolutely must be destroyed immediately.",
+    alt: "Kratos, in black armor, shoving over a towering bronze statue as its pedestal cracks apart, with the towers of Atlantis behind." },
+
   { img: "lee-battle", kicker: "Lee Logan", title: "Not looking for a fight",
     text: "Lee has never gone looking for trouble. When it finds him anyway, he turns out to be very good at the job.",
     alt: "Lee in sunglasses and tactical gear with a rifle on a terrace above Atlantis." },
