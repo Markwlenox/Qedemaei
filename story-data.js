@@ -65,13 +65,9 @@ window.STORY = [
     text: "Chief Scientist of Atlantis. She has been searching for two very particular people for a very long time, with the patience of someone who has lived for thousands of years. Which she has.",
     alt: "Portrait of Aileah, a dark-haired woman with an ageless face and a knowing smile." },
 
-  { img: "aileah-armor", kicker: "Aileah", title: "The armor remembers her",
-    text: "When Atlantis is threatened, its Chief Scientist puts on armor that knows her touch and carries a blue-edged sword. The surface world remembers her by another name.",
-    alt: "Aileah in polished silver armor, standing in front of the stone city of Atlantis." },
-
-  { img: "aileah-helmet", kicker: "Aileah", title: "The helmet goes on last",
-    text: "There is a reason the old stories always gave Athena a helmet. Somebody saw her wearing one, and the world never forgot what happened.",
-    alt: "Aileah in full silver battle armor and helmet before the city." },
+  { img: "aileah-helmet", kicker: "Aileah", title: "The armor remembers her",
+    text: "When Atlantis is threatened, its Chief Scientist puts on armor that knows her touch and carries a blue-edged sword. There is a reason the old stories always gave Athena a helmet. Somebody saw her wearing one, and the world never forgot what happened.",
+    alt: "Aileah in polished silver armor and helmet, hand on her sword, standing on a terrace above the stone city of Atlantis." },
 
   { img: "raman", kicker: "Atlantis", title: "Raman Okido",
     text: "High Strategos, commander of everyone in Atlantis who carries a weapon. Five thousand years old, dry as the desert, and very hard to surprise. Surface world mythology called him Apollo, but they didn\u2019t know the other half of the story.",
@@ -126,8 +122,8 @@ window.STORY = [
     alt: "An immense glowing dome on the deep sea floor with a lit city inside and an aircraft descending toward it." },
 
   { img: "atlantis-city", kicker: "Inside the dome", title: "An old Mediterranean city",
-    text: "Narrow streets, old stone, flowers spilling from the balconies. It feels like a Greek island town that simply kept going. The sky looks clear and blue until you get close enough to see that it is water.",
-    alt: "A sprawling whitewashed city of narrow streets and old stone seen from a high landing platform." },
+    text: "Narrow streets, old stone and flowers spilling from the balconies, rising toward towers no surface architect has imagined. The sky looks clear and blue until you get close enough to see that it is water.",
+    alt: "Atlantis seen from a landing platform: old stone streets and domed glass halls among tall spiraling towers, with two sleek aircraft parked in the foreground." },
 
   { img: "pacifica", kicker: "The research vessel", title: "The Pacifica",
     text: "Two kilometers long, five hundred meters wide, and shaped for the deep water where it spends most of its life. The Pacifica has been at sea for about ten thousand years.",
